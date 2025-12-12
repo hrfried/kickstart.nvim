@@ -9,7 +9,10 @@ return {
       -- this is getting on my fucking nerves
       -- "rcarriga/nvim-notify", -- optional, enables the "notify" view
       -- let's see if snacks backend annoysme less...
-      "folke/snacks.nvim", -- optional, enables the "notify" view
+      {
+        "folke/snacks.nvim", -- optional, enables the "notify" view
+        lazy = false,
+      },
       "nvim-lualine/lualine.nvim", -- for the statusline integration
     },
     opts = {}, -- you can leave this empty if using config
