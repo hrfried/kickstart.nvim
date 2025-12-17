@@ -1044,11 +1044,26 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    branch = 'master',
+    -- see https://github.com/nvim-treesitter/nvim-treesitter/issues/4767, but master branch
+    -- is stable but deprecated. use until I figure out whether https://github.com/nvim-treesitter/nvim-treesitter-locals
+    -- or another plugin will replace the shit that gets broken with this
+    -- keep an eye on this too https://pawelgrzybek.com/nvim-incremental-selection/
+    --
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     ---@module 'nvim-treesitter'
     ---@type TSConfig
     ---@diagnostic disable-next-line: missing-fields
     opts = {
+      incremental_selection = {
+        enable = true,
+          keymaps = {
+            init_selection = "<A-o>",
+            node_incremental = "<A-o>",
+            scope_incremental = "<A-O>",
+            node_decremental = "<A-i>",
+        },
+      },
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
