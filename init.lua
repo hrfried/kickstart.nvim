@@ -1139,6 +1139,8 @@ require('lazy').setup({
 -- Load custom overrides after Lazy has finished initializing (non-plugin code)
 -- holden 2025-10-22
 pcall(require, "custom.overrides")
+-- holden 2025-12-31, add specific spot for custom commands and stuff
+pcall(require, "custom.commands")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
