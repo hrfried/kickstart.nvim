@@ -168,6 +168,12 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 --- Disable line wrapping
+
+-- holden 2026-01-28 non-wrapping is getting kinda fucking annoying,
+-- especially for diagnostic messages. test this out
+-- vim.o.wrap = false
+-- vim.o.wrap = true
+-- nah that's fucking annoying, use trouble instead
 vim.o.wrap = false
 
 -- Highlight max chars per line
