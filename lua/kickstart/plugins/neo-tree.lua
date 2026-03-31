@@ -6,7 +6,9 @@ return {
   -- temporarily pull from git head until https://github.com/nvim-neo-tree/neo-tree.nvim/pull/1918/files
   -- is a tagged version...
   -- version = '*',
-  version = false, 
+  -- version = false, 
+  -- holden 2026-02-24 test changing back after new breakage...seems ok now? kinda?
+  version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended

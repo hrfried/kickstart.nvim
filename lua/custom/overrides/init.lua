@@ -8,6 +8,7 @@
 require("custom.overrides.gitignore")
 require("custom.overrides.filetypes")
 require("custom.overrides.tabs")
+require("custom.overrides.keymaps")
 return {}
 -- require("custom.overrides.filetypes")
 
