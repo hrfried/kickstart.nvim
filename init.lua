@@ -117,6 +117,8 @@ vim.o.showmode = false
 --  See `:help 'clipboard'`
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
+  -- holden testing 2026-05-04
+  vim.g.clipboard = 'wl-copy'
 end)
 
 -- Enable break indent
